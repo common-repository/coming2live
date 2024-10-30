@@ -1,0 +1,37 @@
+/* Coming2Live admin styles */
+@import "utils";
+@import "toggle";
+@import "background-controls";
+@import "ui-slider";
+@import "fixing";
+
+.c2l-setting-container {
+  display: flex;
+
+  > main {
+    flex: 0 0 1200px;
+    max-width: 1200px;
+  }
+
+  > aside {
+  }
+}
+
+.c2l-nav-tabs {
+  position: relative;
+  max-width: 1200px;
+
+  .c2l-nav-preview {
+    top: 18px;
+    right: 0px;
+    position: absolute;
+    color: #484848;
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  .cl2-premium-nav {
+    color: #736b22;
+    background: #fff6a6;
+  }
+}

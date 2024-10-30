@@ -1,0 +1,114 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin pseudo-dashicons($glyph: "\f333") {
+  content: $glyph;
+  font-family: 'Dashicons';
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  text-indent: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.c2l-flex {
+  display: flex;
+}
+
+.c2l-mt0 {
+  margin-top: 0 !important;
+}
+.c2l-mb0 {
+  margin-bottom: 0 !important;
+}
+.c2l-mt1 {
+  margin-top: 1em;
+}
+.c2l-mb1 {
+  margin-bottom: 1em;
+}
+
+.c2l-block-label {
+  display: block;
+  margin: 0 0 7px;
+}
+
+/* CSS Note */
+.c2l-sweet-note {
+  display: block;
+  position: relative;
+  padding: 1em;
+
+  background-color: #fbfeff;
+  border: 1px dashed #9fcce0;
+  border-radius: 1px;
+
+  .cmb-td > & {
+    max-width: 780px;
+  }
+
+  > h3,
+  > h4 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  > p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Input addon */
+.c2l-input-addon {
+  display: flex;
+
+  > select {
+    margin: 0;
+  }
+
+  > input[type="text"],
+  > input[type="email"],
+  > input[type="password"] {
+    flex-grow: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 0;
+  }
+
+  > button,
+  > input[type="button"],
+  > input[type="submit"] {
+    margin-left: -1px !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/* Inline colorpicker */
+.c2l-inline-colorpicker {
+  @include clearfix;
+  margin-bottom: 1em;
+
+  .wp-picker-container {
+    float: left;
+  }
+
+  .wp-color-result.button {
+    margin: 0;
+  }
+}

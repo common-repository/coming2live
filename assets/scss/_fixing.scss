@@ -1,0 +1,157 @@
+/* CMB2 Fixing */
+.c2l-options-page.cmb2-options-page {
+  max-width: 100%;
+}
+
+.c2l-options-page .cmb2-wrap {
+  font-size: 13px;
+
+  textarea
+  input[type=url],
+  input[type=text],
+  input[type=email],
+  input[type=number],
+  input[type=password] {
+    padding: 3px 5px;
+  }
+
+  input:not([type=hidden]) + input,
+  input:not([type=hidden]) + select,
+  input:not([type=hidden] ) + .button-secondary {
+    margin-left: 7px;
+  }
+
+  .cmb2-id-custom-css > .cmb-td,
+  .cmb-type-c2l-fallback > .cmb-td,
+  [data-fieldtype="c2l_themes"] > .cmb-td {
+    padding: 0;
+  }
+
+  p.cmb2-metabox-description,
+  span.cmb2-metabox-description {
+    color: #696969;
+    font-style: inherit;
+  }
+
+  .cmb2-post-search-button {
+    background-color: #eee;
+    padding: 3px;
+    margin: 0 0 0 5px !important;
+    vertical-align: middle;
+    border-radius: 15px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    cursor: pointer
+  }
+
+  // File remove button.
+  .cmb2-media-status {
+    display: flex;
+    flex-wrap: wrap;
+
+    .img-status {
+      display: block;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    .img-status img {
+      margin: 0;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+    }
+
+    .img-status.ui-sortable-placeholder {
+      border: dashed 2px #eee;
+      visibility: visible !important;
+      box-sizing: border-box;
+    }
+  }
+
+  .cmb2-remove-file-button {
+    color: #fff;
+    background: #f54646;
+    font-size: 0;
+    text-indent: -2000px;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(#000, 0.2);
+    transition: transform 0.15s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+    top: -7px;
+    left: -7px;
+    width: 20px;
+    height: 20px;
+    display: none;
+
+    &:before {
+      font-size: 20px;
+      line-height: 20px;
+      @include pseudo-dashicons("\f335");
+    }
+
+    &:active {
+      transform: scale(2);
+    }
+  }
+
+  .img-status:hover .cmb2-remove-file-button,
+  .embed-status:hover .cmb2-remove-file-button {
+    display: block;
+  }
+}
+
+.c2l-options-page .typography-table {
+  td,
+  th {
+    font-size: 13px;
+  }
+
+  tr > td:last-child {
+    padding-right: 0;
+  }
+
+  label {
+    width: 75px;
+    padding-top: 3px;
+    vertical-align: top;
+  }
+
+  select,
+  input[type="text"] {
+    min-width: 100px;
+  }
+
+  .font-select {
+  }
+}
+
+/* Fields */
+.c2l-social-fields {
+  > select {
+    width: 100px;
+  }
+
+  > input {
+    left: -1px;
+    position: relative;
+  }
+
+  > input:focus,
+  > select:focus {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.cmb2-id-custom-css {
+  .cmb-td > textarea {
+    width: 100% !important;
+    min-height: 350px;
+  }
+
+  .CodeMirror {
+    border: solid 1px #eee;
+  }
+}
